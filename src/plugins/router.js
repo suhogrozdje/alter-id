@@ -4,8 +4,6 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 import Index from '../pages/index'
-import Author from '../pages/author'
-
 
 
 export default new Router({
@@ -16,13 +14,7 @@ export default new Router({
             path: '/',
             name: 'Index',
             component: Index,
-            meta: {title: 'The Buffed Bear! A strength gaining program'}
-        },
-        {
-            path: '/author',
-            name: 'Author',
-            component: Author,
-            meta: {title: 'About the author | The Buffed Bear!'}
+            meta: {title: 'Alter_ID | Your virtual clone assistant'}
         }
     ]
 })

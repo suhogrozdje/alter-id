@@ -15,5 +15,8 @@ module.exports = {
             }
         ]
     },
+    options: {
+        title: "Alter_ID"
+    }
     // plugin omitted
 }

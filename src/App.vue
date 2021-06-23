@@ -39,23 +39,19 @@ body{
 
 a{
   text-decoration: none;
-  display: inline-block;
-  border-bottom: 1px dashed #194772;
-  color: #0f518d;
+  /*display: inline-block;*/
+  /*border-bottom: 1px dashed #194772;*/
+  /*color: #0f518d;*/
   /*padding-bottom: -5px;*/
-}
-a:hover {
-  color: #08345c;
-  border-bottom: 1px solid #194772;
 }
 
 #app {
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-family: "nimbus-sans", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background: #eee;
+  background: #fafaf5;
   min-height: 100vh;
   position: relative;
 }
@@ -71,42 +67,6 @@ a:hover {
   overflow: hidden;
 }
 
-
-.lightbox-holder {
-  clear:both
-}
-
-.images-wrapper {
-  clear: both;
-  margin-top: 40px;
-}
-
-.images-wrapper .image{
-  cursor: pointer;
-  float: left;
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 0 auto;
-  width: 150px;
-  height: 150px !important;
-  margin-right: 25px;
-  border: 1px solid #bbb;
-  margin-bottom: 25px;
-  border-radius: 3px;
-}
-
-.footer {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  height: 50px;
-  margin: auto 0 0 0;
-  background: #11182b;
-  text-align: right;
-  line-height: 50px;
-  color: #a2a7b5;
-}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1439px) {
