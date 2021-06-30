@@ -4,7 +4,7 @@
       <a href="#" v-scroll-to="{el: '#app'}" class="menu-button left">
         Alter_ID
       </a>
-      <a href="#" v-scroll-to="{el: '#modes'}" class="menu-button right">
+      <a href="#" v-scroll-to="{el: '#selection', offset: -80}" class="menu-button right">
         Meet yours
       </a>
       <a href="#" v-scroll-to="{el: '#modes'}" class="menu-button right">

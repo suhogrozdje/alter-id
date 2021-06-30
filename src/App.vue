@@ -30,8 +30,6 @@ export default {
 </script>
 
 <style>
-/* @import 'typeface-roboto' */
-
 body{
   margin: 0;
   padding: 0;
@@ -39,10 +37,6 @@ body{
 
 a{
   text-decoration: none;
-  /*display: inline-block;*/
-  /*border-bottom: 1px dashed #194772;*/
-  /*color: #0f518d;*/
-  /*padding-bottom: -5px;*/
 }
 
 #app {
@@ -57,7 +51,6 @@ a{
 }
 
 .page-container{
-  padding-bottom: 100px;
 }
 
 .content {
@@ -70,41 +63,11 @@ a{
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1439px) {
-  #index .intro {
-    height: 380px !important;
-  }
-
-  .logo {
-    height: 450px !important;
-  }
-
-  .bb{
-    background-size: 650px !important;
-  }
-
-  .blocker{
-    font-size: 32px !important;
-    line-height: 40px !important;
-  }
 
   h2{
-    font-size: 32px !important;
-    line-height: 40px !important;
+    font-size: 48px !important;
   }
 
-  .descriptions .content p{
-    font-size: 22px !important;
-    line-height: 36px !important;
-  }
-
-  .page .intro {
-    height: 140px !important;
-  }
-
-  .page .intro h1 {
-    margin-top: 70px !important;
-    font-size: 40px !important;
-  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -114,40 +77,12 @@ a{
     margin: 0 40px;
   }
 
-  #index .intro {
-    height: 320px !important;
-  }
-
-  .logo {
-    height: 380px !important;
-  }
-
-  .bb{
-    background-size: 580px !important;
-    height: 80px !important;
-  }
-
-  .blocker{
-    line-height: 48px !important;
-  }
 }
 
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 991px) {
 
-  #index .intro {
-    height: 280px !important;
-  }
-
-  .logo {
-    height: 320px !important;
-  }
-
-  .bb{
-    background-size: 500px !important;
-    height: 80px !important;
-  }
 }
 
 
@@ -156,12 +91,6 @@ a{
   .content{
     width: calc(100% - 40px) !important;
     margin: 0 20px;
-  }
-
-  .blocker{
-    font-size: 28px !important;
-    line-height: 40px !important;
-    margin-top: 10px !important;
   }
 
   h2{
@@ -174,26 +103,9 @@ a{
     line-height: 36px !important;
   }
 
-  .page .intro {
-    height: 140px !important;
-  }
-
   .page .intro h1 {
     margin-top: 70px !important;
     font-size: 40px !important;
-  }
-
-  #index .intro {
-    height: 240px !important;
-  }
-
-  .logo {
-    height: 280px !important;
-  }
-
-  .bb{
-    background-size: calc(100vw - 80px) !important;
-    height: 80px !important;
   }
 
 }

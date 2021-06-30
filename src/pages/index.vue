@@ -4,7 +4,7 @@
       <div class="content">
         <p>Hello,<span class="vertical-line"></span></p>
         <p>I, A.I. assistant, am gonna make <br>your life stress free.</p>
-        <p class="right">
+        <p class="right signature">
           Meet me,<br> your Alter_ID
         </p>
         <p class="right">
@@ -97,66 +97,58 @@
     <modes></modes>
     <div id="comments">
       <div class="content">
-        <h2>We are always happy to hear you out.</h2>
-      </div>
-    </div>
-    <div id="selection">
-      <div class="content">
-        <h2>Do u want to meet your Alter_ID?</h2>
-        <p>Select your mode, enter your e-mail address & send request for your own Alter_ID.</p>
-        <div class="row selection">
-          <div class="col-4">
-            <h3>Manual S</h3>
-            <span class="subtext">mode</span>
-            <p>
-              <span class="short">Kind, smart guide.</span>
-              Manual S is a great helper that guides you through stressful administrative processes.
-            </p>
-            <ul>
-              <li>basic guidance</li>
-              <li>administration access</li>
-              <li>health, legal, personal data storage</li>
-            </ul>
-            <div class="ticker ticked"></div>
+        <h2>We are always happy to<br>hear you out.</h2>
+        <div class="comment-container">
+          <div class="comment" id="c1">
+            <div class="avatar"></div>
+            <div class="comment-description">
+              I love the idea of making my own virtual
+              clone…But smarter! 😅
+            </div>
           </div>
-          <div class="col-4"></div>
-          <div class="col-4"></div>
-        </div>
-        <div class="terms-conditions">
-          <input type="checkbox" id="checkbox">
-          <span>I agree with <a href="">terms&conditions</a> and <a href="">privacy policy</a></span>
-        </div>
-        <div class="input-container">
-          <form action="" method="post">
-            <input type="email" name="email">
-            <input type="submit" name="submit">
-          </form>
+          <div class="comment" id="c2">
+            <div class="avatar"></div>
+            <div class="comment-description">
+              I can’t wait to try it! Every Alter_ID mode
+              seems like a blast in a stressful day. ❤️❤️
+            </div>
+          </div>
+          <div class="comment" id="c3">
+            <div class="avatar"></div>
+            <div class="comment-description">
+              I always hate the responsibility to keep
+              important papers somewhere safe.
+              To have everything organized and stored in an app is just amazing. 😎 ☕️
+            </div>
+          </div>
+          <div class="comment" id="c4">
+            <div class="avatar"></div>
+            <div class="comment-description">
+              Alter_ID seems like something I was waiting
+              for all my career!
+            </div>
+          </div>
+          <div class="comment" id="c5">
+            <div class="avatar"></div>
+            <div class="comment-description">
+              Simply the best upcoming app in 2021. 💣💣💣 :))))
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div id="footer">
-      <div class="content">
-        <ul class="footer-navigation">
-          <li>About</li>
-          <li>App</li>
-          <li>How it works</li>
-          <li>Contact</li>
-        </ul>
-        <div class="footer-signature">
-          Alter_ID, 2021
-        </div>
-      </div>
-    </div>
+    <selection></selection>
   </div>
 </template>
 
 <script>
 import Modes from "../components/modes"
+import Selection from "../components/selection"
 
 export default {
   name: 'Index',
   components: {
-    Modes
+    Modes, Selection
   }
 }
 </script>
@@ -165,6 +157,7 @@ export default {
 @import '../assets/css/colors';
 
 #index {
+  overflow-x: hidden;
   #splash {
     background: $aid-beige;
     width: 100%;
@@ -199,8 +192,14 @@ export default {
       margin-bottom: 10px;
 
       &.right {
-        margin-top: 25px;
         text-align: right;
+
+        &.signature{
+          background: url("../assets/images/altersignature.png") bottom right no-repeat;
+          background-size: 100px;
+          padding-bottom: 55px;
+          margin-top: 25px;
+        }
       }
     }
   }
@@ -293,7 +292,7 @@ export default {
         background: url("../assets/images/featurette/app_1.png");
         background-size: 100% 100%;
         width: 300px;
-        height: 916/506*300px;
+        height: 916/439*300px;
         margin: auto;
       }
 
@@ -316,6 +315,89 @@ export default {
     }
   }
 
+  #comments {
+    padding: 70px 0;
+
+
+    h2{
+      font-size: 60px;
+      font-weight: normal;
+      color: $aid-gray;
+    }
+
+    .comment-container {
+      position: relative;
+      height: 590px;
+      margin-top: 30px;
+
+      .comment {
+        position: absolute;
+        width: 400px;
+        min-height: 105px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 2px 4px rgba(0,0,0, 0.2);
+
+        &#c1{
+          left: 50px;
+
+          .avatar {
+            background-image: url("../assets/images/comments/opinionmaker1.png");
+          }
+        }
+        &#c2{
+          right:160px;
+          top: 80px;
+
+          .avatar {
+            background-image: url("../assets/images/comments/opinionmaker2.png");
+          }
+        }
+
+        &#c3{
+          left: 80px;
+          top: 200px;
+
+          .avatar {
+            background-image: url("../assets/images/comments/opinionmaker3.png");
+          }
+        }
+
+        &#c4{
+          right: 110px;
+          top: 280px;
+
+          .avatar {
+            background-image: url("../assets/images/comments/opinionmaker4.png");
+          }
+        }
+
+        &#c5{
+          left: 300px;
+          top: 440px;
+
+          .avatar {
+            background-image: url("../assets/images/comments/opinionmaker5.png");
+          }
+        }
+
+        .avatar{
+          position: absolute;
+          width: 75px;
+          height: 75px;
+          background-size: 75px 75px;
+          left: -20px;
+          top: 20px;
+        }
+        .comment-description {
+          padding: 20px 30px 30px 70px;
+          text-align: left;
+          color: $aid-gray;
+          line-height: 23px;
+        }
+      }
+    }
+  }
 }
 
 .action-button {

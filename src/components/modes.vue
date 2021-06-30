@@ -3,10 +3,8 @@
     <div class="content">
       <h2>3 modes you can choose from.</h2>
     </div>
-    <div class="banner-container">
-      <div class="content">
-        <img class="banner" src="/modes/AuthorA.png" width="100%">
-      </div>
+    <div class="banner-container" :class="{aors: activeMode === 'author-a' || activeMode === 'manual-s'}">
+      <div class="content content-wider"><img class="banner" v-for="mode in modes" v-bind:key="mode.id" :src="'/modes/' + mode.id + '.png'" v-show="activeMode===mode.id" width="100%"></div>
     </div>
     <div class="content">
       <div class="row modes-links">
@@ -29,18 +27,18 @@
             <div class="attributes row">
               <div class="col-6">
                 <ul>
-                  <li v-for="item in mode.attributes.slice(0,6)">{{ item }}</li>
+                  <li v-for="item in mode.attributes.slice(0,6)"  v-bind:key="item.id">{{ item }}</li>
                 </ul>
               </div>
               <div class="col-6">
                 <ul>
-                  <li v-for="item in mode.attributes.slice(6)">{{ item }}</li>
+                  <li v-for="item in mode.attributes.slice(6)"  v-bind:key="item.id">{{ item }}</li>
                 </ul>
               </div>
             </div>
             <div class="icons row">
               <div class="col-4 icon-container" v-for="icon in mode.icons" v-bind:key="icon.id">
-                <div class="big-icon" :class="icon.class"></div>
+                <img class="big-icon" :src="'/icons/' + icon.class + '.png'" :alt="icon.name">
                 <p>{{ icon.name }}</p>
               </div>
             </div>
@@ -83,7 +81,7 @@ export default {
           ],
           icons: [
             {
-              class: 'circles',
+              class: 'icon1',
               name: 'administration access'
             },
             {
@@ -116,7 +114,7 @@ export default {
           ],
           icons: [
             {
-              class: 'circles',
+              class: 'icon1',
               name: 'administration access'
             },
             {
@@ -145,7 +143,7 @@ export default {
           ],
           icons: [
             {
-              class: 'circles',
+              class: 'icon1',
               name: 'administration access'
             },
             {
@@ -187,14 +185,19 @@ export default {
   }
 
   .banner-container{
-    background: linear-gradient(to right, #c7c7c9 50%, #cbffff 50%) ;
     margin: 70px 0;
+    background: #cbffff;
+
+    &.aors{
+      background: linear-gradient(to right, #c7c7c9 50%, #cbffff 50%);
+    }
 
     .content{
       padding: 0
     }
 
     .banner{
+      display: block;
     }
   }
 
@@ -254,13 +257,21 @@ export default {
 
       .icon-container{
         &:first-child{
-          text-align: left;
+          text-align: center;
         }
         &:nth-child(2){
           text-align: center;
         }
         &:last-child{
-          text-align: right;
+          text-align: center;
+        }
+
+        .big-icon{
+          height: 100px;
+        }
+
+        p{
+          margin-top: 20px;
         }
       }
     }
