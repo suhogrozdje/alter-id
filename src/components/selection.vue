@@ -1,58 +1,68 @@
 <template>
   <div id="selection">
-    <div class="content">
-      <div class="selection-back">
-        <div class="selection-heading">
-          <h2>Do u want to meet your Alter_ID?</h2>
-          <p>Select your mode, enter your e-mail address & send request for your own Alter_ID.</p>
-        </div>
-        <div class="row selection">
-          <div class="col-4"
-               v-for="mode in modes"
-               v-bind:key="mode.id">
-            <a href="#" class="col-12 selectable"
-               v-on:click="changeMode(mode.id, $event)"
-               :class="{active: mode.id===activeMode}">
-              <div class="selectable-inner">
-                <div class="title-wrapper">
-                  <h3>{{ mode.name }}</h3>
-                  <span class="subtext">mode</span>
-                </div>
-                <p>
-                  <span class="short">{{ mode.subtitle }}</span>
-                  {{ mode.description }}
-                </p>
-                <ul>
-                  <li v-for="attribute in mode.attributes" v-bind:key="attribute.id">{{ attribute }}</li>
-                </ul>
-              </div>
-              <div class="ticker" :class="{ticked: mode.id === activeMode}"></div>
-            </a>
+    <div class="selection-back">
+      <div class="selection-heading-container">
+        <div class="content">
+          <div class="selection-heading">
+            <h2>Do u want to meet your Alter_ID?</h2>
+            <p>Select your mode, enter your e-mail address & send request for your own Alter_ID.</p>
           </div>
         </div>
-        <div class="input-container">
-          <label class="terms-conditions">
-            <input type="checkbox" id="checkbox">
-            <span class="checkmark"></span>
-            <span class="agreed">I agree with <a href="">terms&conditions</a> and <a href="">privacy policy</a></span>
-          </label>
-          <form action="" method="post">
-            <input type="email" name="email" placeholder="enter your E-mail">
-            <input type="submit" name="submit" value="request your Alter_ID">
-          </form>
-        </div>
-        <div id="footer">
-          <div class="content">
-            <ul class="footer-navigation">
-              <li>About</li>
-              <li>App</li>
-              <li>How it works</li>
-              <li>Contact</li>
-            </ul>
-            <div class="footer-signature">
-              Alter_ID, 2021
+      </div>
+      <div class="selection-container">
+        <div class="content">
+          <div class="selection">
+            <div class="content">
+              <div class="row">
+                <div class="col-4"
+                     v-for="mode in modes"
+                     v-bind:key="mode.id">
+                  <a href="#" class="col-12 selectable"
+                     v-on:click="changeMode(mode.id, $event)"
+                     :class="{active: mode.id===activeMode}">
+                    <div class="selectable-inner">
+                      <div class="title-wrapper">
+                        <h3>{{ mode.name }}</h3>
+                        <span class="subtext">mode</span>
+                      </div>
+                      <p>
+                        <span class="short">{{ mode.subtitle }}</span>
+                        {{ mode.description }}
+                      </p>
+                      <ul>
+                        <li v-for="attribute in mode.attributes" v-bind:key="attribute.id">{{ attribute }}</li>
+                      </ul>
+                    </div>
+                    <div class="ticker" :class="{ticked: mode.id === activeMode}"></div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="input-container">
+              <label class="terms-conditions">
+                <input type="checkbox" id="checkbox">
+                <span class="checkmark"></span>
+                <span class="agreed">I agree with <a href="">terms&conditions</a> and <a href="">privacy policy</a></span>
+              </label>
+              <form action="" method="post">
+                <input type="email" name="email" placeholder="enter your E-mail">
+                <input type="submit" name="submit" value="request your Alter_ID">
+              </form>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <div class="content">
+        <ul class="footer-navigation">
+          <li>About</li>
+          <li>App</li>
+          <li>How it works</li>
+          <li>Contact</li>
+        </ul>
+        <div class="footer-signature">
+          Alter_ID, 2021
         </div>
       </div>
     </div>
@@ -119,8 +129,7 @@ export default {
 @import '../assets/css/colors';
 
 #selection {
-  background: #8b9796;
-  padding: 0 0 70px 0;
+  background: #bebdb3;
 
   .content{
     overflow: visible;
@@ -128,18 +137,22 @@ export default {
   }
 
   .selection-back{
-    position: relative;
-    margin-left: -80px;
-    margin-right: -80px;
-    background: url("../assets/images/selection/back.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    padding: 0 80px
+    //position: relative;
+  }
+
+  .selection-heading-container{
+    background: #99a6a1;
   }
 
   .selection-heading {
-    height: 431px;
-    padding-top: 50px;
+    height: 441px;
+    margin-left: -80px;
+    margin-right: -80px;
+    padding: 50px 80px 0;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("../assets/images/selection/back.png");
+    background-color: #99a6a1;
 
     h2{
       color: #fff;
@@ -153,18 +166,28 @@ export default {
     }
   }
 
+  .selection-container{
+    background: #bebdb3;
+  }
+
   .selection {
-    height: 600px;
-    margin: 100px 0 30px 0 ;
+    padding: 90px 0 30px 0;
+    margin-left: -80px;
+    margin-right: -80px;
+    //padding: 50px 80px 0;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("../assets/images/selection/back.png");
+    background-position:  0 -441px;
 
     & > div:first-child{
       padding-left: 0;
-      padding-right: 18px;
+      //padding-right: 18px;
     }
 
     & > div:last-child{
       padding-right: 0;
-      padding-left: 18px;
+      //padding-left: 18px;
     }
 
     .selectable{
@@ -174,7 +197,7 @@ export default {
       border-radius: 7px;
       display: block;
       width: 100%;
-      height: 100%;
+      height: 580px;
       padding: 0;
       position: relative;
 
@@ -243,6 +266,10 @@ export default {
         left: 50%;
         margin-left: -23px;
         position: absolute;
+
+        &.ticked {
+          background-image: url("../assets/images/selection/selectmode_check.png");
+        }
       }
 
       &:hover, &.active{
@@ -339,7 +366,8 @@ export default {
   }
 
   .input-container{
-    padding: 40px 0 80px 0;
+    padding: 80px 0 80px 0;
+    margin: 0 80px;
     border-bottom: 1px solid $aid-gray;
 
     input[type=email]{
@@ -366,7 +394,15 @@ export default {
       font-size: 18px;
       border-bottom-right-radius: 2px;
       border-top-right-radius: 2px;
-      color: white
+      color: white;
+
+      &:hover{
+        background: lighten($aid-orange, 5%);
+      }
+
+      &:active{
+        background: darken($aid-orange,5%);
+      }
     }
   }
 
@@ -374,6 +410,9 @@ export default {
     color: darken($aid-gray, 10%);
     line-height: 29px;
     font-size: 18px;
+    clear: both;
+    padding: 0 0 70px 0;
+    background: linear-gradient(to bottom, #bebdb3, lighten(#bebdb3, 5%));
 
     ul{
       padding-top: 10px;
