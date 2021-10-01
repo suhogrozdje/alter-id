@@ -44,7 +44,7 @@
                 <span class="checkmark"></span>
                 <span class="agreed">I agree with <a href="">terms&conditions</a> and <a href="">privacy policy</a></span>
               </label>
-              <form action="" method="post">
+              <form autocomplete="off" action="" method="post">
                 <input type="email" name="email" placeholder="enter your E-mail">
                 <input type="submit" name="submit" value="request your Alter_ID">
               </form>
@@ -81,7 +81,7 @@ export default {
           id: 'author-a',
           name: 'Author A',
           subtitle: 'Smart time retriever.',
-          description: 'Author A is a great balance between your control and artificial work speed and knowledge.',
+          description: 'Author A is a great balance between your control and artificial work and speed.',
           attributes: [
             'advanced assistance',
             'administration access',
@@ -161,8 +161,8 @@ export default {
     }
     p{
       color: #fff;
-      font-size: 25px;
-      margin-top: 12px;
+      font-size: 21px;
+      margin-top: 4px;
     }
   }
 
@@ -230,7 +230,7 @@ export default {
         p{
           font-size: 20px;
           text-align: left;
-          line-height: 30px;
+          line-height: 27px;
 
           .short{
             display: block;
@@ -383,7 +383,8 @@ export default {
 
       &:focus{
         outline: none;
-        color: $aid-gray;
+        color: $aid-gray !important;
+        background: $aid-beige !important;
       }
     }
 

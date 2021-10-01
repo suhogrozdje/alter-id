@@ -16,7 +16,11 @@
     </div>
     <div id="video">
       <div class="content">
-        <div class="placeholder"></div>
+        <div class="video-wrapper">
+          <div class="video-container">
+            <iframe src="https://player.vimeo.com/video/618418907?h=c43f52de10&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;portrait=0&amp;byline=0&amp;title=0&amp;controls=0&amp;sidedock=0&amp;color=D04423FF" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="video_test4_song1.mp4"></iframe>
+          </div>
+        </div>
       </div>
     </div>
     <div id="featured">
@@ -166,7 +170,8 @@ export default {
     .content{
       text-align: left;
       font-size: 52px;
-      padding-top: 200px;
+      padding-top: 150px;
+      line-height: 56px;
       overflow: visible;
       clear: both;
 
@@ -206,9 +211,25 @@ export default {
 
   #video {
     background: darken(#a39072, 3%);
+    //background: $aid-beige;
+
+    .video-container{
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%;
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
 
     .placeholder {
-      background: url("../assets/images/video-placeholder.jpg");
+      //background: url("../assets/images/video-placeholder.jpg");
       background-size: 100% auto;
       width: 100%;
       height: 590px;
@@ -236,7 +257,8 @@ export default {
         text-align: right;
 
         img{
-          margin-top: 3px;
+          margin-top: 6px;
+          margin-right: 6px;
         }
       }
       &.tech{
@@ -249,7 +271,7 @@ export default {
         height: 33px;
       }
       &.new img{
-        height: 28px;
+        height: 23px;
       }
 
     }
@@ -266,13 +288,14 @@ export default {
       h2 {
         font-weight: normal;
         font-size: 34px;
+        line-height: 36px;
         color: $aid-gray;
-        margin-bottom: 20px;
+        margin-bottom: 22px;
       }
 
       p {
         font-size: 21px;
-        line-height: 31px;
+        line-height: 28px;
         color: $aid-gray;
       }
     }

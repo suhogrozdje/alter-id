@@ -186,10 +186,10 @@ export default {
 
   .banner-container{
     margin: 70px 0;
-    background: #cbffff;
+    //background: #cbffff;
 
     &.aors{
-      background: linear-gradient(to right, #c7c7c9 50%, #cbffff 50%);
+      //background: linear-gradient(to right, #c7c7c9 50%, #cbffff 50%);
     }
 
     .content{

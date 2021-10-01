@@ -71,7 +71,7 @@ export default{
 .menu-button:hover{
   color: $aid-gray;
   background: transparentize(lighten($aid-beige,3%), 0.4);
-  border-bottom: 1px solid transparentize(darken($aid-beige,20%), 0.2);
+  //border-bottom: 1px solid transparentize(darken($aid-beige,20%), 0.2);
   //
 }
 </style>
