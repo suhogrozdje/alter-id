@@ -210,8 +210,8 @@ export default {
   }
 
   #video {
-    background: darken(#a39072, 3%);
-    //background: $aid-beige;
+    //background: darken(#a39072, 3%);
+    background: $aid-beige;
 
     .video-container{
       position: relative;
